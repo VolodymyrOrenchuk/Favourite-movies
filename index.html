@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Улюблені фільми</title>
+    <link rel="stylesheet" href="assets/styles/app.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="assets/scripts/app.js" defer></script>
+  </head>
+  <body>
+    <div id="backdrop"></div>
+    <div class="modal card" id="add-modal">
+      <div class="modal__content">
+        <label for="title">Назва фільму</label>
+        <input type="text" name="title" id="title" />
+        <label for="image-url">URL картинки</label>
+        <input type="text" name="image-url" id="image-url" />
+        <label for="rating">Рейтинг</label>
+        <input
+          type="number"
+          step="1"
+          max="5"
+          min="1"
+          name="rating"
+          id="rating"
+        />
+      </div>
+      <div class="modal__actions">
+        <button class="btn btn--passive">Відміна</button>
+        <button class="btn btn--success">Додати</button>
+      </div>
+    </div>
+    <div class="modal card" id="delete-modal">
+      <h2 class="modal__title">Ви впевнені?</h2>
+      <p class="modal__content">Ви дійсно хочете видалити цей елемент?</p>
+      <div class="modal__actions">
+        <button class="btn btn--passive">Відміна</button>
+        <button class="btn btn--danger">Так</button>
+      </div>
+    </div>
+
+    <header>
+      <h1>Улюблені фільми</h1>
+      <button>Додати фільм</button>
+    </header>
+
+    <main>
+      <section id="entry-text" class="card">
+        <p>Ваш список фільмів</p>
+      </section>
+      <ul id="movie-list"></ul>
+    </main>
+  </body>
+</html>
